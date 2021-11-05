@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { default as Login } from "./Components/Login/index";
+import { default as Profile } from "./Components/Profile/index";
+import { default as Register } from "./Components/Register/index";
+import { default as Error } from "./Components/Error/index";
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [userID, setUserID] = useState(undefined);
+  const [portal, setPortal] = useState("login");
+
+  //Functionality for logging in
+  //TODO: Get userID
+  const onLogin = () => {
+    setUserID("undefined")
+    setPortal("profile");
+  };
+
+  const onRegister = () => {
+    setPortal("register");
+  };
+
+  const onBack = () => {
+    setUserID(undefined);
+    setPortal("login");
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {portal==="register" ? (
+        <Register onBack={onBack} onRegister={onLogin} />
+      ) : portal==="login" ? (
+        <Login onLogin={onLogin} onRegister={onRegister} />
+      ) : portal==="profile" ? (
+        <Profile userID={userID} onBack={onBack} />
+      ) : (
+        <Error onBack={onBack} />
+      )}
     </div>
   );
 }
