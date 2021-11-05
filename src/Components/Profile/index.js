@@ -20,7 +20,7 @@ const Profile = ({ userID, onBack }) => {
         <br />
       </span>
       <span className="subheading">userID: {userID}</span>
-      <button className="button" onClick={() => onBack()}>Back</button>
+      <button data-testid={"logoutButton"} className="button" onClick={() => onBack()}>Logout</button>
     </div>
     ) : (
       <Workout workoutID={workoutID} />

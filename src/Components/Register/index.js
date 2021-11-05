@@ -42,8 +42,8 @@ const Register = ({ onRegister, onBack }) => {
         <input id="passwordID" type="text" className="input" onChange={updatePassword} />
         <span className="label">confirm password</span>
         <input id="password2ID" type="text" className="input" onChange={updatePassword2} />
-        <button className="button" onClick={() => onRegister()}>Register</button>
-        <button className="button" onClick={() => onBack()}>Back</button>
+        <button data-testid={"registerButton"} className="button" onClick={() => onRegister()}>Register</button>
+        <button data-testid={"backButton"} className="button" onClick={() => onBack()}>Back</button>
       </div>
     );
   }
