@@ -1,4 +1,5 @@
 import { default as Login } from "./Components/Login/index";
+import { default as AccountProfile } from "./AccountProfile/index";
 import { default as Profile } from "./Components/Profile/index";
 import { default as Register } from "./Components/Register/index";
 import { default as Error } from "./Components/Error/index";
@@ -23,6 +24,15 @@ function App() {
   const onBack = () => {
     setUserID(undefined);
     setPortal("login");
+
+  // TODO: View account settings such as logout, change username, etc
+  const viewAccountSettings = () => {
+  };
+  // TODO: View workout group selected in dropdown menu
+  const viewWorkoutGroup = () => { 
+  };
+  //TODO: Create a workout group page
+  const createWorkoutGroup = () => {
   };
 
   return (
@@ -38,6 +48,6 @@ function App() {
       )}
     </div>
   );
-}
+
 
 export default App;
