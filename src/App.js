@@ -24,7 +24,7 @@ function App() {
   const onBack = () => {
     setUserID(undefined);
     setPortal("login");
-
+  }
   // TODO: View account settings such as logout, change username, etc
   const viewAccountSettings = () => {
   };
@@ -50,4 +50,4 @@ function App() {
   );
 
 
-export default App;
+export default App};
