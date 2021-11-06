@@ -1,7 +1,19 @@
+import { default as AccountProfile } from "./AccountProfile/index";
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  // TODO: View account settings such as logout, change username, etc
+  const viewAccountSettings = () => {
+  };
+  // TODO: View workout group selected in dropdown menu
+  const viewWorkoutGroup = () => { 
+  };
+  //TODO: Create a workout group page
+  const createWorkoutGroup = () => {
+  };
+
   return (
     <div className="App">
       <header className="App-header">
