@@ -32,16 +32,16 @@ app.post("/Login",(req,res)=>{
             if(password === user.password){
                 res.send({message:"login sucess",user:user})
             }else{
-                res.send({message:"wrong credentials"})
+                res.send({message:"wrong credentials",error:"wrong pw"})
             }
         }else{
-            res.send("not register")
+            res.send({error:"not exist"})
         }
     })
 });
 app.post("/Register",(req,res)=>{
     console.log(req.body)
-    const {name,email,password} =req.body;
+    const {email,password} =req.body;
     User.findOne({email:email},(err,user)=>{
         if(user){
             res.send({message:"user already exist"})
@@ -49,7 +49,7 @@ app.post("/Register",(req,res)=>{
             try {
                 // storing our user data into database
                 const response =  User.create({
-                    name,email,
+                    email,
                     password
                 })
                 return res.redirect('/');
