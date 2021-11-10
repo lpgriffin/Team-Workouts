@@ -1,13 +1,11 @@
 import { render, getByTestId, fireEvent } from "@testing-library/react";
 import App from "./App";
 
-describe("Jest is working properly", () => {
-  it("jest knows that 2+2=4?", () => {
-    expect(2 + 2).toBe(4);
-  });
+it("Jest is working properly", () => {
+  expect(2 + 2).toBe(4);
 });
 
-it("App loads on login page", () => {
+it("App: Loads on login page", () => {
   const { container } = render(<App />);
   const loginButton = getByTestId(container, "loginButton");
   const registerButton = getByTestId(container, "registerButton");
