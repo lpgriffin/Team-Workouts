@@ -11,7 +11,14 @@ import App from "./App";
  * - The tests it contains: tests that it runs (ie, its children)
  * 
  * Going further on how to make an individual test, basically just copy/paste an "it statement"
- * Each "it statement" is a test that falls under its parent "describe statement"
+ * - Each "it statement" is a test that falls under its parent "describe statement"
+ * - Each test is comprised of a label, and the test itself
+ * - Some tests work differently, with "expect statements", but the majority of our tests
+ *   are run by checking if an html element is rendered after an event happens, where jest tries
+ *   to find the element that's supposed to be there. If it can't find it, the test throws an error 
+ *   and fails. The way we grab each html element is from its "data-testid" attribute, which are 
+ *   defined in the return statement of javascript files for each component 
+ *   (ie App.js, login/index.js, register/index.js, etc)
  * 
  * If the stuff I described above doesn't make complete sense (it prolly wont),
  * run npm test, then when you get a prompt, type the "a" key to run all tests
