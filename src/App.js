@@ -26,7 +26,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div data-testid={"app"} className="App">
       {portal==="register" ? (
         <Register onBack={onBack} onRegister={onLogin} />
       ) : portal==="login" ? (

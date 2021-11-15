@@ -14,13 +14,13 @@ const Profile = ({ userID, onBack }) => {
   return (
     <div>
     { workoutID === undefined ? (
-    <div className="profile">
-      <span className="heading">
+    <div data-testid={"profile"} className="profile">
+      <span data-testid={"profile-heading"} className="heading">
         Team Workouts
         <br />
       </span>
-      <span className="subheading">userID: {userID}</span>
-      <button data-testid={"logoutButton"} className="button" onClick={() => onBack()}>Logout</button>
+      <span data-testid={"profile-subheading"} className="subheading">userID: {userID}</span>
+      <button data-testid={"profile-logoutButton"} className="button" onClick={() => onBack()}>Logout</button>
     </div>
     ) : (
       <Workout workoutID={workoutID} />

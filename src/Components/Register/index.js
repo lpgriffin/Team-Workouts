@@ -30,20 +30,20 @@ const Register = ({ onRegister, onBack }) => {
   }
 
     return (
-      <div className="register">
-        <span className="heading">Team Workouts<br/></span>
-        <span className="label">username</span>
-        <input id="usernameID" type="text" className="input" onChange={updateUsername} />
-        <span className="label">name</span>
-        <input id="nameID" type="text" className="input" onChange={updateName} />
-        <span className="label">email</span>
-        <input id="emailID" type="text" className="input" onChange={updateEmail} />
-        <span className="label">password</span>
-        <input id="passwordID" type="text" className="input" onChange={updatePassword} />
-        <span className="label">confirm password</span>
-        <input id="password2ID" type="text" className="input" onChange={updatePassword2} />
-        <button data-testid={"registerButton"} className="button" onClick={() => onRegister()}>Register</button>
-        <button data-testid={"backButton"} className="button" onClick={() => onBack()}>Back</button>
+      <div data-testid={"register"} className="register">
+        <span data-testid={"register-heading"} className="heading">Team Workouts<br/></span>
+        <span data-testid={"register-usernameLabel"} className="label">username</span>
+        <input data-testid={"register-usernameInput"} id="usernameID" type="text" className="input" onChange={updateUsername} />
+        <span data-testid={"register-nameLabel"} className="label">name</span>
+        <input data-testid={"register-nameInput"} id="nameID" type="text" className="input" onChange={updateName} />
+        <span data-testid={"register-emailLabel"} className="label">email</span>
+        <input data-testid={"register-emailInput"} id="emailID" type="text" className="input" onChange={updateEmail} />
+        <span data-testid={"register-passwordLabel"} className="label">password</span>
+        <input data-testid={"register-passwordInput"} id="passwordID" type="text" className="input" onChange={updatePassword} />
+        <span data-testid={"register-password2Input"} className="label">confirm password</span>
+        <input data-testid={"register-password2Label"} id="password2ID" type="text" className="input" onChange={updatePassword2} />
+        <button data-testid={"register-registerButton"} className="button" onClick={() => onRegister()}>Register</button>
+        <button data-testid={"register-backButton"} className="button" onClick={() => onBack()}>Back</button>
       </div>
     );
   }

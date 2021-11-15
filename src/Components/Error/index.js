@@ -2,10 +2,10 @@
 import './style.css';
 
 const Error = ({ onBack }) => (
-      <div className="error">
-        <span className="heading">Team Workouts<br/></span>
-        <span className="subheading">Error</span>
-        <button className="button" onClick={() => onBack()}>Back to Login</button>
+      <div data-testid={"error"} className="error">
+        <span data-testid={"error-heading"} className="heading">Team Workouts<br/></span>
+        <span data-testid={"error-subheading"} className="subheading">Error</span>
+        <button data-testid={"error-backButton"} className="button" onClick={() => onBack()}>Back to Login</button>
       </div>
 );
   

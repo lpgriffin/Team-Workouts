@@ -15,14 +15,14 @@ const Login = ({ onLogin, onRegister }) => {
   }
 
     return (
-      <div className="login">
-        <span className="heading">Team Workouts<br/></span>
-        <span className="label">email</span>
-        <input id="emailID" type="text" className="input" onChange={updateEmail} />
-        <span className="label">password</span>
-        <input id="passwordID" type="text" className="input" onChange={updatePassword} />
-        <button data-testid={"loginButton"} className="button" onClick={() => onLogin(email, password)}>Login</button>
-        <button data-testid={"registerButton"} className="button" onClick={() => onRegister(email, password)}>Register</button>
+      <div data-testid={"login"} className="login">
+        <span data-testid={"login-heading"} className="heading">Team Workouts<br/></span>
+        <span data-testid={"login-emailLabel"} className="label">email</span>
+        <input data-testid={"login-emailInput"} id="emailID" type="text" className="input" onChange={updateEmail} />
+        <span data-testid={"login-passwordLabel"} className="label">password</span>
+        <input data-testid={"login-passwordInput"} id="passwordID" type="text" className="input" onChange={updatePassword} />
+        <button data-testid={"login-loginButton"} className="button" onClick={() => onLogin(email, password)}>Login</button>
+        <button data-testid={"login-registerButton"} className="button" onClick={() => onRegister(email, password)}>Register</button>
       </div>
     );
   }
