@@ -19,8 +19,10 @@ app.use("/user", userRouter);
 const CONNECTION_URL = 'mongodb+srv://spikeuser:tz52smdcowBAIy2H@cluster0.9dtiq.mongodb.net/test';
 const PORT = process.env.PORT|| 4000;
 
-mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URL||CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
-
+if(process.env.NODE_ENV==='production'){
+    app.use(express.static('client/public'))
+}
 mongoose.set('useFindAndModify', false);
