@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node_modules/.bin/nodemon index.js",
+    "start": " npm install && nodemon index.js",
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
 
