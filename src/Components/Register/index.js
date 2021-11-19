@@ -40,8 +40,8 @@ const Register = ({ onRegister, onBack }) => {
         <input data-testid={"register-emailInput"} id="emailID" type="text" className="input" onChange={updateEmail} />
         <span data-testid={"register-passwordLabel"} className="label">password</span>
         <input data-testid={"register-passwordInput"} id="passwordID" type="text" className="input" onChange={updatePassword} />
-        <span data-testid={"register-password2Input"} className="label">confirm password</span>
-        <input data-testid={"register-password2Label"} id="password2ID" type="text" className="input" onChange={updatePassword2} />
+        <span data-testid={"register-password2Label"} className="label">confirm password</span>
+        <input data-testid={"register-password2Input"} id="password2ID" type="text" className="input" onChange={updatePassword2} />
         <button data-testid={"register-registerButton"} className="button" onClick={() => onRegister()}>Register</button>
         <button data-testid={"register-backButton"} className="button" onClick={() => onBack()}>Back</button>
       </div>
