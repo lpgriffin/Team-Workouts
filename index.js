@@ -23,6 +23,6 @@ mongoose.connect(process.env.MONGODB_URL||CONNECTION_URL, { useNewUrlParser: tru
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
 if(process.env.NODE_ENV==='production'){
-    app.use(express.static('client/public'))
+    app.use(express.static('client/build'))
 }
 mongoose.set('useFindAndModify', false);
