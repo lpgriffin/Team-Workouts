@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.modal {
+    height: 80%;
+    width: 80%;
+    font-family: 'Roboto', sans-serif;
+    z-index: 15;
+}
+
+.modal-x {
+    height: 100%;
+}
+
+.modal-button {
+    height: 50px;
+    width: 250px;
+    margin-top: 15px;
+
+    font-size: 24px;
+    color: #FFF;
+    font-weight: 700;
+
+    background-color: #884488;
+    border-radius: 40px;
+    border: 2px #000 solid;
+
+    position: relative;
+    left: calc(50% - 125px);
+}

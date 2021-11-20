@@ -1,22 +1,24 @@
 import "./style.css";
 import { useState } from "react";
+import { default as Modal } from "./../Modal/index";
 import logoSrc from "./../../Assets/logo.svg";
 import barsSrc from "./../../Assets/bars.svg";
 import upSrc from "./../../Assets/up.svg";
 import downSrc from "./../../Assets/down.svg";
 
-const Home = ({ userID, onLogout }) => {
+const Home = ({ userID, onBack }) => {
   const[showHeader, setShowHeader] = useState(false);
   const[showWelcome, setShowWelcome] = useState(true);
-  const[workoutID, setWorkoutID] = useState(undefined);
   const[nextWorkout, setNextWorkout] = useState(true);
+  const[lastWorkout, setLastWorkout] = useState(true);
 
   //TODO: Get User data
   const username = "user1";
-  const workoutLevel = "1";
-  const workoutProgress = "50%";
   const userLevel = "2";
   const userProgress = "33%";
+  const workout = "workout1";
+  const workoutLevel = "1";
+  const workoutProgress = "50%";
   const getUser = () => {
     
   };
@@ -54,6 +56,11 @@ const Home = ({ userID, onLogout }) => {
 
   return (
     <div data-testid={"home"} className="home">
+      { showHeader ? (
+          <Modal modalType={"bar"} onLogout={onBack()} onX={barsClick()} />
+        ) : (
+          <br />
+        )}
         <div data-testid={"home-header"} className="home-header">
           <img data-testid={"home-logo"} className="home-logo" src={logoSrc} alt={""} />
           <img data-testid={"home-bars"} className="home-bars" src={barsSrc} alt={""} onClick={() => barsClick()}/>
@@ -66,10 +73,10 @@ const Home = ({ userID, onLogout }) => {
           )}
         </div>
         <div data-testid={"home-level"} className="home-level">
-        <span data-testid={"home-level-label"} className="home-level-label">Level {userLevel} - {userProgress}</span>
+          <span data-testid={"home-level-label"} className="home-level-label">Level {userLevel} - {userProgress}</span>
         </div>
         <div data-testid={"home-workout"} className="home-workout">
-          <span data-testid={"home-workout-label"} className="home-workout-label">{workoutID}</span>
+          <span data-testid={"home-workout-label"} className="home-workout-label">{workout}</span>
           <div data-testid={"home-level"} className="home-level">
             <span data-testid={"home-level-label"} className="home-level-label">Level {workoutLevel} - {workoutProgress}</span>
           </div>

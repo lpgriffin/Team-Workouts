@@ -53,7 +53,8 @@
 .home-level {
     width: 100%;
     height: calc(10% - 35px);
-
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: #FFF;
 }
 
@@ -63,13 +64,13 @@
     font-weight: 700;
 
     width: 100%;
-    padding-left: 15px;
+    padding: 15px;
 }
 
 .home-workout {
     width: 100%;
     height: calc(50% - 20px);
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 10px;
 
     display: block;
@@ -83,12 +84,15 @@
 
     width: 100%;
     padding-left: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .home-button {
     height: 70px;
     min-width: calc(50% - 30px);
-    margin: 10px;
+    margin: 15px;
 
     font-size: 24px;
     color: #FFF;
@@ -97,9 +101,6 @@
     background-color: #884488;
     border-radius: 0px;
     border: 2px #000 solid;
-
-    position: relative;
-    left: calc(50% - 125px);
 }
 
 .home-bottom {
