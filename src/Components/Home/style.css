@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.home {
+    height: 615px;
+    width: 320px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.home-header {
+    width: calc(100% - 20px);
+    height: calc(10% - 20px);
+    padding: 10px;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: #DFDFDF;
+}
+
+.home-logo {
+    height: 100%;
+    position: relative;
+    left: 0px;
+}
+
+.home-bars {
+    height: 100%;
+    position: relative;
+    right: 0px;
+}
+
+.home-top {
+    width: 100%;
+    height: calc(10% - 35px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #C4C4C4;
+}
+
+.home-welcome-label {
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+
+    width: 100%;
+}
+
+.home-level {
+    width: 100%;
+    height: calc(10% - 35px);
+
+    background-color: #FFF;
+}
+
+.home-level-label {
+    font-size: 24px;
+    color: #884488;
+    font-weight: 700;
+
+    width: 100%;
+    padding-left: 15px;
+}
+
+.home-workout {
+    width: 100%;
+    height: calc(50% - 20px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    display: block;
+    background-color: #DFDFDF;
+}
+
+.home-workout-label {
+    font-size: 24px;
+    color: #884488;
+    font-weight: 700;
+
+    width: 100%;
+    padding-left: 10px;
+}
+
+.home-button {
+    height: 70px;
+    min-width: calc(50% - 30px);
+    margin: 10px;
+
+    font-size: 24px;
+    color: #FFF;
+    font-weight: 700;
+
+    background-color: #884488;
+    border-radius: 0px;
+    border: 2px #000 solid;
+
+    position: relative;
+    left: calc(50% - 125px);
+}
+
+.home-bottom {
+    width: 100%;
+    height: calc(70% - 10px);
+    padding-top: 10px;
+
+    display: block;
+    align-content: center;
+    justify-content: center;
+    background-color: #DFDFDF;
+}

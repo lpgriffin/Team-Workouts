@@ -1,5 +1,5 @@
 import { default as Login } from "./Components/Login/index";
-import { default as Profile } from "./Components/Profile/index";
+import { default as Home } from "./Components/Home/index";
 import { default as Register } from "./Components/Register/index";
 import { default as Error } from "./Components/Error/index";
 import "./App.css";
@@ -13,7 +13,7 @@ function App() {
   //TODO: Get userID
   const onLogin = () => {
     setUserID("undefined")
-    setPortal("profile");
+    setPortal("home");
   };
 
   const onRegister = () => {
@@ -26,13 +26,13 @@ function App() {
   };
 
   return (
-    <div data-testid={"app"} className="App">
+    <div data-testid={"app"} className="app">
       {portal==="register" ? (
         <Register onBack={onBack} onRegister={onLogin} />
       ) : portal==="login" ? (
         <Login onLogin={onLogin} onRegister={onRegister} />
-      ) : portal==="profile" ? (
-        <Profile userID={userID} onBack={onBack} />
+      ) : portal==="home" ? (
+        <Home userID={userID} onBack={onBack} />
       ) : (
         <Error onBack={onBack} />
       )}
